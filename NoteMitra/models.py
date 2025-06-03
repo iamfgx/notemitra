@@ -20,7 +20,7 @@ class Note(models.Model):
 class syllabus(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    pdf_file = models.FileField(upload_to='notes_pdfs/')
+    pdf_file = models.FileField(upload_to='syllabus_pdfs/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
