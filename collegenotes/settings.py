@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'NoteMitra',  # Your app
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +143,10 @@ DATABASES = {
 }
 
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'deu1yrrgh',
+    'API_KEY': '551111179131965',
+    'API_SECRET': 'kV7gNMgd5gY0E4JjegOkgHo9mJ0'
+}
