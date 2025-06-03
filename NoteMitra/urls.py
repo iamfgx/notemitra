@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home,about,contact,notes,subject,c,feedback_view,notes_list,syllabus_list
+from .views import home,about,contact,notes,subject,feedback_view,notes_list,syllabus_list
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
