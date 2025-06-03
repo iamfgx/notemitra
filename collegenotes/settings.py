@@ -134,6 +134,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 import dj_database_url
 import os
 
-DATABASES['default'] = dj_database_url.config(
-    default=os.getenv('DATABASE_URL')
-)
+DATABASES = {
+    'default': dj_database_url.config(
+        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}'
+    )
+}
+
+
