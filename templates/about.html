@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block data %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <h3 class="display-3 font-weight-bold text-white">Kya Karega Bhai Mere Bare Me Jankar &#128514 <br> Tu Padh Le Bas &#128513</h3>
+            <h5 class="display-3 font-weight-bold text-white">Ye le bhai fir se link de di ab to padh le &#128079</h5>
+        </div>
+    </div>
+    <!-- Header End -->
+
+<div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Deep Learning</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-2">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Computer Network</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Data Mining & Warehousing</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4">Notes</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Compiler Design</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4">Notes</a>
+                            </div>
+                        </div>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block data %}
+  <!-- Header Start -->
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+        <div class="row align-items-center px-3">
+            <div class="col-lg-6 text-center text-lg-left">
+                <h4 class="text-white mb-4 mt-5 mt-lg-0">Mit AI&DS Learning Center</h4>
+                <h1 class="display-3 font-weight-bold text-white">Notes AI&DS walo ke liye</h1>
+                <p class="text-white mb-4">Is semester ki exam ke sare notes yahi mil jayenge. Abhi Deep Learning ke upload kiye hai keval.</p>
+                <a href="{% url 'notes_list' %}" class="btn btn-secondary mt-1 py-3 px-5">View Notes</a>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <img class="img-fluid" src="/static/img/lg-1.png" alt="" style="max-width: 80%; height: 600px;">
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Facilities Start -->
+    <div style="background: linear-gradient(to right, rgba(23, 162, 184, 1), rgba(17, 235, 159, 1));">
+    <div class="ml-5 display-3 navbar-brand font-weight-bold text-secondary" style="font-size: 40px;">Current sem subject syllabus and imp questions: </div>
+    <div class="container-fluid pt-5">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <a href="{% url "syllabus_list" %}"><img src="/static/img/dl.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3"></a>
+                        <div class="pl-4">
+                            <h4>Deep Learning</h4>
+                            <p class="m-0">The definition of Deep learning is that it is the branch of machine learningthat is based...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <img src="/static/img/cn.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3">
+                        <div class="pl-4">
+                            <h4>Computer Networks</h4>
+                            <p class="m-0">A computer network is a system that connects two or more devices to share data, resources, and...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <img src="/static/img/dmw.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3">
+                        <div class="pl-4">
+                            <h4>Data Mining and Warehousing</h4>
+                            <p class="m-0">It is a technology that aggregates structured data from one or and...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pb-1">
+                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
+                        <img src="/static/img/cd.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3">
+                        <div class="pl-4">
+                            <h4>Compiler Design</h4>
+                            <p class="m-0">A compiler is software that translates or converts a program written in a high-level language...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Facilities Start -->
+
+
+    <!-- Class Start -->
+    <div class="mt-5"></div>
+    <div style="background: linear-gradient(to right, rgba(17, 235, 159, 1), rgba(118, 75, 235, 1));">
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="text-center pb-2">
+                <p class="section-title px-5"><span class="px-2">Upcoming Notes</span></p>
+                <h1 class="mb-4">BTech/ BE</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="/static/img/sixth.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">AI&DS</h4>
+                            <p class="card-text">In 6th sem subject's are Deep Learning, Computer Network, Data Mining & Warehousing, Compiler Design</p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Deep Learning</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-2">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Computer Network</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4 ">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right"><strong>Data Mining & Warehousing</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4">Notes</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 py-1 text-right border-right"><strong>Compiler Design</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4">Notes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="/static/img/seventh.jpg" alt="" style="height: 350px;">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">AI&DS</h4>
+                            <p class="card-text">In 7th sem subject's are: AI for Computer Vision, Cloud Computing, Data Visualization</p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right mt-2"><strong>AI for CV</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-2 mb-3">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right mt-2" ><strong>Cloud Computing</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4 mb-3">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right mt-2"><strong>Data Visualization</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4 mb-3">Notes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="/static/img/eith.jpg" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">AI&DS</h4>
+                            <p class="card-text">In 8th sem subject's are: Big Data, Natural Language Processing, Augmented & Virtual Reality  </p>
+                        </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right mt-2"><strong>Big Data</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-2 mb-3">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right mt-2"><strong>NLP</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4 mb-3">Notes</a>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-6 py-1 text-right border-right mt-2"><strong>Virtual Reality</strong></div>
+                                <a href="{% url 'notes_list' %}" class="btn btn-primary px-4 mx-auto mt-4 mb-3">Notes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Class End -->
+
+{% endblock %}
