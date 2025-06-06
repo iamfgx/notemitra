@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'NoteMitra',
-    'cloudinary_storage',
     'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +143,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME', 'deu1yrrgh'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY', '551111179131965'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET', 'kV7gNMgd5gY0E4JjegOkgHo9mJ0')
+}
