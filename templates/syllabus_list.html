@@ -9,7 +9,7 @@
             <div>
                 <strong>{{ i.title }}</strong> ({{ i.subject }})
             </div>
-            <a href="{{ i.pdf_file.url }}" class="btn btn-primary btn-sm" download>Download PDF</a>
+            <a href="{{ i.pdf_url }}" class="btn btn-primary btn-sm" download>Download PDF</a>
         </div>
         {% empty %}
         <p>No syllabus found.</p>

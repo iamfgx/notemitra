@@ -9,7 +9,8 @@
             <div>
                 <strong>{{ note.title }}</strong> ({{ note.subject }})
             </div>
-            <a href="{{ note.pdf_file.url }}" class="btn btn-primary btn-sm" download>Download PDF</a>
+            <a href="{{ note.pdf_url }}" class="btn btn-primary" download>Download PDF</a>
+
         </div>
         {% empty %}
         <p>No notes found.</p>

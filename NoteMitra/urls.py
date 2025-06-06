@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home,about,contact,notes,subject,feedback_view,notes_list,syllabus_list
+from .views import home,about,contact,notes,subject,feedback_view,notes_list,syllabus_list, note_view
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
@@ -11,6 +11,7 @@ urlpatterns = [
     path('feedback/', feedback_view, name='feedback'),
     path('notes_list/', notes_list, name='notes_list'),
     path('syllabus_list/', syllabus_list, name='syllabus_list'),
+    path('upload_view/', note_view, name='upload_view'),
 ]
 
 if settings.DEBUG:
