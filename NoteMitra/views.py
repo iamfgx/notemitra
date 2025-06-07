@@ -61,3 +61,22 @@ def note_view(request):
 
     subjects = Subject.objects.all()
     return render(request, 'upload_note.html', {'subjects': subjects})
+
+# SYLLABUS UPLOAD VIEW
+
+def syllabus_upload_view(request):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        subject_id = request.POST.get('subject_id')
+        file = request.FILES['pdf_file']
+
+        filename = f"syllabus_pdfs/{file.name}"
+        file_url = upload_to_supabase(file, filename)
+
+        subject_obj = Subject.objects.get(id=subject_id)
+        Syllabus.objects.create(subject=subject_obj, title=title, pdf_url=file_url)
+
+        return redirect('syllabus_list')
+
+    subjects = Subject.objects.all()
+    return render(request, 'upload_syllabus.html', {'subjects': subjects})
