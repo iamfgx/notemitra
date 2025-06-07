@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block data %}
   <!-- Header Start -->
-    <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
+    <div class="container-fluid bg-primary px-0 px-md-5 mb-2">
         <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
                 <h4 class="text-white mb-4 mt-5 mt-lg-0">Mit AI&DS Learning Center</h4>
-                <h1 class="display-3 font-weight-bold text-white">Notes AI&DS walo ke liye</h1>
-                <p class="text-white mb-4">Is semester ki exam ke sare notes yahi mil jayenge. Abhi Deep Learning ke upload kiye hai keval.</p>
+                <h1 class="display-3 font-weight-bold text-white">Notes For AI&DS</h1>
+                <p class="text-white mb-4">Is semester ki exam ke sare notes yahi mil jayenge. Thanks for coming.</p>
                 <a href="{% url 'notes_list' %}" class="btn btn-secondary mt-1 py-3 px-5">View Notes</a>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
@@ -15,11 +15,19 @@
         </div>
     </div>
     <!-- Header End -->
-
+<marquee class="bg-dark text-white p-2" behavior="scroll" direction="left" scrollamount="17" onmouseover="this.stop();" onmouseout="this.start();">
+    <div class="container" id="conten">
+  <font class="title" style="margin-left:50px">
+    <span class="title-word title-word-1">Trending</span>
+    <span class="title-word title-word-2">notes: &emsp;&emsp;&emsp;&emsp;</span>
+    <span><a href="{% url 'notes_list' %}" class="btn btn-primary px-4">Computer Networks</a></span>
+  </font>
+</div>
+</marquee>
 
     <!-- Facilities Start -->
     <div style="background: linear-gradient(to right, rgba(23, 162, 184, 1), rgba(17, 235, 159, 1));">
-    <div class="ml-5 display-3 navbar-brand font-weight-bold text-secondary" style="font-size: 40px;">Current sem subject syllabus and imp questions: </div>
+    <div class="ml-5 display-3 navbar-brand font-weight-bold text-secondary" style="font-size: 40px;">To download IMP questions click on related image. Happy studying!: </div>
     <div class="container-fluid pt-5">
         <div class="container pb-3">
             <div class="row">
@@ -34,7 +42,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <img src="/static/img/cn.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3">
+                        <a href="{% url "syllabus_list" %}"><img src="/static/img/cn.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3"></a>
                         <div class="pl-4">
                             <h4>Computer Networks</h4>
                             <p class="m-0">A computer network is a system that connects two or more devices to share data, resources, and...</p>
@@ -43,7 +51,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <img src="/static/img/dmw.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3">
+                        <a href="{% url "syllabus_list" %}"><img src="/static/img/dmw.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3"></a>
                         <div class="pl-4">
                             <h4>Data Mining and Warehousing</h4>
                             <p class="m-0">It is a technology that aggregates structured data from one or and...</p>
@@ -52,7 +60,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <img src="/static/img/cd.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3">
+                        <a href="{% url "syllabus_list" %}"><img src="/static/img/cd.png" alt="" style="width: 60px; height: 60px;" class="h1 font-weight-normal text-primary mb-3"></a>
                         <div class="pl-4">
                             <h4>Compiler Design</h4>
                             <p class="m-0">A compiler is software that translates or converts a program written in a high-level language...</p>
