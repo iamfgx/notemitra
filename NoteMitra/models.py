@@ -14,7 +14,7 @@ class Note(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     pdf_file = models.FileField(upload_to='temp_uploads/')
-    pdf_url = models.URLField(blank=True)
+    pdf_url = models.URLField(blank=True,null=True)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
