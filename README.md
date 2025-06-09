@@ -52,3 +52,8 @@ SUPABASE_BUCKET=notes-pdfs
 SYLLABUS_BUCKET=syllabus-pdfs  # optional
 ```
 ---
+
+## 📦 Install Dependencies
+```
+pip install -r requirements.txt
+```
