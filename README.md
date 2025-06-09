@@ -50,5 +50,5 @@ SUPABASE_URL=https://your-project-id.supabase.co
 SUPABASE_KEY=your-supabase-anon-key
 SUPABASE_BUCKET=notes-pdfs
 SYLLABUS_BUCKET=syllabus-pdfs  # optional
-env```
+```
 ---
