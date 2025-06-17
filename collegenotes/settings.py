@@ -29,8 +29,7 @@ SECRET_KEY = 'django-insecure-c%70@wq$op48e0u_l&-ab12wh%ee+xm!(w5!1kdz#g_=9gefqf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['notemitra.onrender.com', 'www.notemitra.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -42,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'NoteMitra',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

@@ -80,3 +80,16 @@ def syllabus_upload_view(request):
 
     subjects = Subject.objects.all()
     return render(request, 'upload_syllabus.html', {'subjects': subjects})
+
+
+# SEO configuration
+
+from django.http import HttpResponse
+
+def robots_txt(request):
+    lines = [
+        "User-agent: *",
+        "Disallow:",
+        f"Sitemap: https://notemitra.onrender.com/sitemap.xml",
+    ]
+    return HttpResponse("\n".join(lines), content_type="text/plain")
