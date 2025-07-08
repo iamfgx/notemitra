@@ -2,7 +2,6 @@ from django.urls import path
 from .views import home,about,contact,notes,subject,feedback_view,notes_list,syllabus_list, note_view, syllabus_upload_view
 from django.conf import settings
 from django.conf.urls.static import static
-from django.http import HttpResponse
 urlpatterns = [
     path('',home, name='home'),
     path('about/',about, name='about'),
@@ -14,7 +13,6 @@ urlpatterns = [
     path('syllabus_list/', syllabus_list, name='syllabus_list'),
     path('upload_notes_view/', note_view, name='upload_view'),
     path('upload_syllabus/', syllabus_upload_view, name='upload_syllabus'),
-    path("ping/", lambda request: HttpResponse("pong")),
 ]
 
 if settings.DEBUG:
